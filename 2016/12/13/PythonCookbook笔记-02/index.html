@@ -88,7 +88,7 @@
 解决方案1234import heapqnums = [1, 2, 3, 4, -1, 23, 4, -12, 45]print(heapq.nlargest(3, nums))  # [45,23,4]print(heapq.nsmallest(3, nums))  # [-12,-1,1]
 
 
-是不是很方便。此外，还可以传入参数来处理更复杂的数据结构。12345678">
+是不是很方便。此外，还可以传入参数来处理更复杂的数据结构。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PythonCookbook笔记-02">
 <meta property="og:url" content="http://hiden.me/2016/12/13/PythonCookbook笔记-02/index.html">
@@ -97,15 +97,15 @@
 解决方案1234import heapqnums = [1, 2, 3, 4, -1, 23, 4, -12, 45]print(heapq.nlargest(3, nums))  # [45,23,4]print(heapq.nsmallest(3, nums))  # [-12,-1,1]
 
 
-是不是很方便。此外，还可以传入参数来处理更复杂的数据结构。12345678">
-<meta property="og:updated_time" content="2016-12-13T15:01:30.787Z">
+是不是很方便。此外，还可以传入参数来处理更复杂的数据结构。">
+<meta property="og:updated_time" content="2016-12-13T15:07:18.490Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PythonCookbook笔记-02">
 <meta name="twitter:description" content="找到最大或最小的N个元素
 解决方案1234import heapqnums = [1, 2, 3, 4, -1, 23, 4, -12, 45]print(heapq.nlargest(3, nums))  # [45,23,4]print(heapq.nsmallest(3, nums))  # [-12,-1,1]
 
 
-是不是很方便。此外，还可以传入参数来处理更复杂的数据结构。12345678">
+是不是很方便。此外，还可以传入参数来处理更复杂的数据结构。">
 
 
 
@@ -326,7 +326,7 @@
 <li>解决方案<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line">nums = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">-1</span>, <span class="number">23</span>, <span class="number">4</span>, <span class="number">-12</span>, <span class="number">45</span>]</span><br><span class="line">print(heapq.nlargest(<span class="number">3</span>, nums))  <span class="comment"># [45,23,4]</span></span><br><span class="line">print(heapq.nsmallest(<span class="number">3</span>, nums))  <span class="comment"># [-12,-1,1]</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>是不是很方便。此外，还可以传入参数来处理更复杂的数据结构。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line">portfolio = [</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'IBM'</span>, <span class="string">'shares'</span>: <span class="number">100</span>, <span class="string">'price'</span>: <span class="number">91.1</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'AAPL'</span>, <span class="string">'shares'</span>: <span class="number">50</span>, <span class="string">'price'</span>: <span class="number">543.22</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'FB'</span>, <span class="string">'shares'</span>: <span class="number">200</span>, <span class="string">'price'</span>: <span class="number">21.09</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'HPQ'</span>, <span class="string">'shares'</span>: <span class="number">35</span>, <span class="string">'price'</span>: <span class="number">31.75</span>&#125;</span><br><span class="line">]</span><br><span class="line">cheap = heapq.nsmallest(<span class="number">3</span>, portfolio, key=<span class="keyword">lambda</span> s: s[<span class="string">'price'</span>])</span><br><span class="line">expensive = heapq.nlargest(<span class="number">3</span>, portfolio, key=<span class="keyword">lambda</span> s: s[<span class="string">'price'</span>])</span><br></pre></td></tr></table></figure></p>
+<p>是不是很方便。此外，还可以传入参数来处理更复杂的数据结构。<a id="more"></a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line">portfolio = [</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'IBM'</span>, <span class="string">'shares'</span>: <span class="number">100</span>, <span class="string">'price'</span>: <span class="number">91.1</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'AAPL'</span>, <span class="string">'shares'</span>: <span class="number">50</span>, <span class="string">'price'</span>: <span class="number">543.22</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'FB'</span>, <span class="string">'shares'</span>: <span class="number">200</span>, <span class="string">'price'</span>: <span class="number">21.09</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'HPQ'</span>, <span class="string">'shares'</span>: <span class="number">35</span>, <span class="string">'price'</span>: <span class="number">31.75</span>&#125;</span><br><span class="line">]</span><br><span class="line">cheap = heapq.nsmallest(<span class="number">3</span>, portfolio, key=<span class="keyword">lambda</span> s: s[<span class="string">'price'</span>])</span><br><span class="line">expensive = heapq.nlargest(<span class="number">3</span>, portfolio, key=<span class="keyword">lambda</span> s: s[<span class="string">'price'</span>])</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
