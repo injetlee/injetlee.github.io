@@ -253,6 +253,240 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/13/PythonCookbook笔记-02/" itemprop="url">
+                  PythonCookbook笔记-02
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-13T23:01:03+08:00" content="2016-12-13">
+              2016-12-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="找到最大或最小的N个元素"><a href="#找到最大或最小的N个元素" class="headerlink" title="找到最大或最小的N个元素"></a>找到最大或最小的N个元素</h3><ul>
+<li>解决方案<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line">nums = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">-1</span>, <span class="number">23</span>, <span class="number">4</span>, <span class="number">-12</span>, <span class="number">45</span>]</span><br><span class="line">print(heapq.nlargest(<span class="number">3</span>, nums))  <span class="comment"># [45,23,4]</span></span><br><span class="line">print(heapq.nsmallest(<span class="number">3</span>, nums))  <span class="comment"># [-12,-1,1]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>是不是很方便。此外，还可以传入参数来处理更复杂的数据结构。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line">portfolio = [</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'IBM'</span>, <span class="string">'shares'</span>: <span class="number">100</span>, <span class="string">'price'</span>: <span class="number">91.1</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'AAPL'</span>, <span class="string">'shares'</span>: <span class="number">50</span>, <span class="string">'price'</span>: <span class="number">543.22</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'FB'</span>, <span class="string">'shares'</span>: <span class="number">200</span>, <span class="string">'price'</span>: <span class="number">21.09</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'HPQ'</span>, <span class="string">'shares'</span>: <span class="number">35</span>, <span class="string">'price'</span>: <span class="number">31.75</span>&#125;</span><br><span class="line">]</span><br><span class="line">cheap = heapq.nsmallest(<span class="number">3</span>, portfolio, key=<span class="keyword">lambda</span> s: s[<span class="string">'price'</span>])</span><br><span class="line">expensive = heapq.nlargest(<span class="number">3</span>, portfolio, key=<span class="keyword">lambda</span> s: s[<span class="string">'price'</span>])</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/22/PythonCookbook笔记-01/" itemprop="url">
+                  PythonCookbook笔记-01
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-22T21:11:03+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="写出更Pythonic的代码，"><a href="#写出更Pythonic的代码，" class="headerlink" title="写出更Pythonic的代码，"></a>写出更Pythonic的代码，</h3><h4 id="1-将序列分解为单独的变量-直接将序列赋值给变量即可。但是要注意："><a href="#1-将序列分解为单独的变量-直接将序列赋值给变量即可。但是要注意：" class="headerlink" title="1. 将序列分解为单独的变量,直接将序列赋值给变量即可。但是要注意："></a>1. 将序列分解为单独的变量,直接将序列赋值给变量即可。但是要注意：</h4><ul>
+<li>变量的数量要和序列中元素的数量相等。</li>
+<li><p>例子如下：</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/22/PythonCookbook笔记-01/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/22/Python-爬虫入门/" itemprop="url">
                   Python 爬虫入门
                 </a>
@@ -322,123 +556,6 @@
 <li>3.模拟登陆知乎
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/06/22/Python-爬虫入门/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/22/PythonCookbook笔记-01/" itemprop="url">
-                  PythonCookbook笔记-01
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-22T21:11:03+08:00" content="2016-06-22">
-              2016-06-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="写出更Pythonic的代码，"><a href="#写出更Pythonic的代码，" class="headerlink" title="写出更Pythonic的代码，"></a>写出更Pythonic的代码，</h3><h4 id="1-将序列分解为单独的变量-直接将序列赋值给变量即可。但是要注意："><a href="#1-将序列分解为单独的变量-直接将序列赋值给变量即可。但是要注意：" class="headerlink" title="1. 将序列分解为单独的变量,直接将序列赋值给变量即可。但是要注意："></a>1. 将序列分解为单独的变量,直接将序列赋值给变量即可。但是要注意：</h4><ul>
-<li>变量的数量要和序列中元素的数量相等。</li>
-<li><p>例子如下：</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/22/PythonCookbook笔记-01/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1103,7 +1220,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

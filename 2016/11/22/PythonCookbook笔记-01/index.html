@@ -84,22 +84,22 @@
 
 
 
-<meta name="description" content="在学校时，从六维空间下载了一些电子书，文学类全英文mobi格式的，有24G多。放在硬盘有段时间了，比较占地方，想移到移动硬盘里去。文件的目录格式如下：第一级目录是按作者名排序的文件夹，第二级目录是以书的名字命名的文件夹，第三级就是书了。
-讲道理的话我直接剪切，粘贴就结束了，可是，偏偏就出问题了，粘贴的时候提示我文件名太长，不能粘贴。然后就搜索了一下，Windows文件的路径最长为255字符，这里由">
+<meta name="description" content="写出更Pythonic的代码，1. 将序列分解为单独的变量,直接将序列赋值给变量即可。但是要注意：
+变量的数量要和序列中元素的数量相等。
+例子如下：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python遍历文件夹并改名">
-<meta property="og:url" content="http://hiden.me/2016/06/01/Python遍历文件夹并改名/index.html">
+<meta property="og:title" content="PythonCookbook笔记-01">
+<meta property="og:url" content="http://hiden.me/2016/11/22/PythonCookbook笔记-01/index.html">
 <meta property="og:site_name" content="Hiden">
-<meta property="og:description" content="在学校时，从六维空间下载了一些电子书，文学类全英文mobi格式的，有24G多。放在硬盘有段时间了，比较占地方，想移到移动硬盘里去。文件的目录格式如下：第一级目录是按作者名排序的文件夹，第二级目录是以书的名字命名的文件夹，第三级就是书了。
-讲道理的话我直接剪切，粘贴就结束了，可是，偏偏就出问题了，粘贴的时候提示我文件名太长，不能粘贴。然后就搜索了一下，Windows文件的路径最长为255字符，这里由">
-<meta property="og:image" content="https://segmentfault.com/img/bVxI3k">
-<meta property="og:image" content="https://segmentfault.com/img/bVxJaZ">
-<meta property="og:updated_time" content="2016-06-01T14:24:35.155Z">
+<meta property="og:description" content="写出更Pythonic的代码，1. 将序列分解为单独的变量,直接将序列赋值给变量即可。但是要注意：
+变量的数量要和序列中元素的数量相等。
+例子如下：">
+<meta property="og:updated_time" content="2016-12-13T15:04:55.692Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python遍历文件夹并改名">
-<meta name="twitter:description" content="在学校时，从六维空间下载了一些电子书，文学类全英文mobi格式的，有24G多。放在硬盘有段时间了，比较占地方，想移到移动硬盘里去。文件的目录格式如下：第一级目录是按作者名排序的文件夹，第二级目录是以书的名字命名的文件夹，第三级就是书了。
-讲道理的话我直接剪切，粘贴就结束了，可是，偏偏就出问题了，粘贴的时候提示我文件名太长，不能粘贴。然后就搜索了一下，Windows文件的路径最长为255字符，这里由">
-<meta name="twitter:image" content="https://segmentfault.com/img/bVxI3k">
+<meta name="twitter:title" content="PythonCookbook笔记-01">
+<meta name="twitter:description" content="写出更Pythonic的代码，1. 将序列分解为单独的变量,直接将序列赋值给变量即可。但是要注意：
+变量的数量要和序列中元素的数量相等。
+例子如下：">
 
 
 
@@ -117,7 +117,7 @@
   };
 </script>
 
-  <title> Python遍历文件夹并改名 | Hiden </title>
+  <title> PythonCookbook笔记-01 | Hiden </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -257,7 +257,7 @@
             
             
               
-                Python遍历文件夹并改名
+                PythonCookbook笔记-01
               
             
           </h1>
@@ -269,8 +269,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-01T20:36:34+08:00" content="2016-06-01">
-              2016-06-01
+            <time itemprop="dateCreated" datetime="2016-11-22T21:11:03+08:00" content="2016-11-22">
+              2016-11-22
             </time>
           </span>
 
@@ -316,14 +316,28 @@
       
 
       
-        <p>在学校时，从六维空间下载了一些电子书，文学类全英文mobi格式的，有24G多。放在硬盘有段时间了，比较占地方，想移到移动硬盘里去。文件的目录格式如下：<img src="https://segmentfault.com/img/bVxI3k" alt="图片描述"><br>第一级目录是按作者名排序的文件夹，第二级目录是以书的名字命名的文件夹，第三级就是书了。</p>
-<p><strong>讲道理的话我直接剪切，粘贴就结束了，可是，偏偏就出问题了，粘贴的时候提示我文件名太长，不能粘贴。然后就搜索了一下，Windows文件的路径最长为255字符，这里由于书名和第二级文件夹目录名字较长，超过了限制，导致无法复制过去。</strong></p>
-<p>所以才有了这篇文章。<a id="more"></a></p>
-<p>计划是把第二级文件夹的名字缩短，这样以后搜索书名的时候还可以检索到相应的书目。</p>
-<p>下面直接上代码了，代码写的很糙，看下思路就行了。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">dir = os.getcwd()         <span class="comment">#获取当前目录</span></span><br><span class="line">subdir = os.listdir(dir)  <span class="comment">#遍历当前目录下所有文件，也就是获取第一级作者名字所有文件夹</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> subdir:</span><br><span class="line">    path = os.path.join(dir,i)      <span class="comment">#把第一级目录添加到路径中</span></span><br><span class="line">    <span class="keyword">if</span> os.path.isdir(path):         <span class="comment">#如果path仍然是文件夹，下面就继续遍历出其中的文件，</span></span><br><span class="line">        end_dir = os.listdir(path)  <span class="comment">#实际上这步判断可以不要的，因为我知道目录结构。</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(end_dir)):  <span class="comment">#一些作者下面可能会有多本书，所以再一次遍历得到二级文件夹目录</span></span><br><span class="line">            newname = end_dir[i][<span class="number">0</span>:<span class="number">50</span>] <span class="comment">#这里缩短二级文件夹的名字，取前50个字符。</span></span><br><span class="line">            os.rename(os.path.join(path,end_dir[i]),os.path.join(path,newname))  <span class="comment">#用新名字取代旧名字</span></span><br></pre></td></tr></table></figure></p>
-<p>到这里，名字就改完了，我顺利的把文件移到了硬盘。</p>
-<p>然后呢，我在想，24G，有多少本书呢，那么问题来了，<br>代码很糙，凑合看吧，上代码。这段代码是通用的，可以直接放到任何地方检查文件数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">result = []</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_all</span><span class="params">(cwd)</span>:</span></span><br><span class="line">    get_dir = os.listdir(cwd)  <span class="comment">#遍历当前目录，获取文件列表</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> get_dir:          </span><br><span class="line">        sub_dir = os.path.join(cwd,i)  <span class="comment"># 把第一步获取的文件加入路径</span></span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(sub_dir):     <span class="comment">#如果当前仍然是文件夹，递归调用</span></span><br><span class="line">            get_all(sub_dir)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            ax = os.path.basename(sub_dir)  <span class="comment">#如果当前路径不是文件夹，则把文件名放入列表</span></span><br><span class="line">            result.append(ax)</span><br><span class="line">            print(len(result))   <span class="comment">#对列表计数</span></span><br><span class="line">            </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>: </span><br><span class="line">    cur_path = os.getcwd()   <span class="comment">#当前目录</span></span><br><span class="line">    get_all(cur_path)</span><br></pre></td></tr></table></figure></p>
-<p>最后，运行后得到结果15108，然后可以结合上篇文章，把书名导入到Excel表中，方便查询。<br><img src="https://segmentfault.com/img/bVxJaZ" alt="图片描述"></p>
+        <h3 id="写出更Pythonic的代码，"><a href="#写出更Pythonic的代码，" class="headerlink" title="写出更Pythonic的代码，"></a>写出更Pythonic的代码，</h3><h4 id="1-将序列分解为单独的变量-直接将序列赋值给变量即可。但是要注意："><a href="#1-将序列分解为单独的变量-直接将序列赋值给变量即可。但是要注意：" class="headerlink" title="1. 将序列分解为单独的变量,直接将序列赋值给变量即可。但是要注意："></a>1. 将序列分解为单独的变量,直接将序列赋值给变量即可。但是要注意：</h4><ul>
+<li>变量的数量要和序列中元素的数量相等。</li>
+<li><p>例子如下：</p>
+<a id="more"></a>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;x, y = (<span class="number">4</span>,<span class="number">5</span>)</span><br><span class="line">&gt;&gt;&gt;x</span><br><span class="line"><span class="number">4</span></span><br><span class="line">&gt;&gt;&gt;y</span><br><span class="line"><span class="number">5</span></span><br><span class="line">&gt;&gt;&gt;a,_,(c,d) = [<span class="number">1</span>,<span class="number">2</span>,(<span class="number">3</span>,<span class="number">4</span>)]</span><br><span class="line">&gt;&gt;&gt;a</span><br><span class="line"><span class="number">1</span></span><br><span class="line">&gt;&gt;&gt;_</span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt;&gt;&gt;c</span><br><span class="line"><span class="number">3</span></span><br><span class="line">&gt;&gt;&gt;d</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不只是元组与列表可以，任何可迭代对象都可以，包括字符串，文件，迭代器，生成器等。</p>
+</li>
+<li>可以用 _ 作为变量名，表示要丢弃的值。</li>
+</ul>
+<h4 id="2-当序列特别长时，而我们又只需某一部分的话可以用-arg来表示。"><a href="#2-当序列特别长时，而我们又只需某一部分的话可以用-arg来表示。" class="headerlink" title="2. 当序列特别长时，而我们又只需某一部分的话可以用 *arg来表示。"></a>2. 当序列特别长时，而我们又只需某一部分的话可以用 *arg来表示。</h4><ul>
+<li><p>比如要取到序列中除去第一项和最后一项的值,求平均值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">drop_first_last</span><span class="params">(grades)</span>:</span></span><br><span class="line">    first, *middle, last = grades</span><br><span class="line">    <span class="keyword">return</span> avg(middle)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>*arg 也可以放到第一个位置，事实上可以放到任何位置，表示剩余的所有值。</p>
+</li>
+</ul>
+<h4 id="3-从队列两端添加或弹出元素的复杂度为O-1-这和列表不同，当从列表头部插入或移除元素时，列表的复杂度为O-N"><a href="#3-从队列两端添加或弹出元素的复杂度为O-1-这和列表不同，当从列表头部插入或移除元素时，列表的复杂度为O-N" class="headerlink" title="3.从队列两端添加或弹出元素的复杂度为O(1),这和列表不同，当从列表头部插入或移除元素时，列表的复杂度为O(N)."></a>3.从队列两端添加或弹出元素的复杂度为O(1),这和列表不同，当从列表头部插入或移除元素时，列表的复杂度为O(N).</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line">&gt;&gt;&gt;q = deque(<span class="number">1</span>)</span><br><span class="line">&gt;&gt;&gt;q = deque(<span class="number">2</span>)</span><br><span class="line">&gt;&gt;&gt;q = deque(<span class="number">3</span>)</span><br><span class="line">&gt;&gt;&gt;q</span><br><span class="line">deque([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">&gt;&gt;&gt;q.appendleft(<span class="number">4</span>)</span><br><span class="line">&gt;&gt;&gt;q</span><br><span class="line">deque([<span class="number">4</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">&gt;&gt;&gt;q.insert(<span class="number">0</span>,<span class="number">8</span>)<span class="comment">#这种插入方法需要首先将列表中的所有元素向后移一个单位</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-找到最大或最小的N个元素"><a href="#4-找到最大或最小的N个元素" class="headerlink" title="4.找到最大或最小的N个元素"></a>4.找到最大或最小的N个元素</h4><ul>
+<li>heapq 模块中有两个函数 nlargest()和nsmallest()<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line">nums = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">34</span>, <span class="number">-5</span>, <span class="number">42</span>, <span class="number">-9</span>]</span><br><span class="line">print(heapq.nlargest(<span class="number">3</span>,nums))<span class="comment"># Prints [42,34,5]</span></span><br><span class="line">print(heapq.nsmallest(<span class="number">3</span>,nums))<span class="comment">#Prints [-9,-5,1]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -354,16 +368,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/17/Python操作Excel表格/" rel="next" title="Python操作Excel表格">
-                <i class="fa fa-chevron-left"></i> Python操作Excel表格
+              <a href="/2016/06/22/Python-爬虫入门/" rel="next" title="Python 爬虫入门">
+                <i class="fa fa-chevron-left"></i> Python 爬虫入门
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/22/Python-爬虫入门/" rel="prev" title="Python 爬虫入门">
-                Python 爬虫入门 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/13/PythonCookbook笔记-02/" rel="prev" title="PythonCookbook笔记-02">
+                PythonCookbook笔记-02 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -516,7 +530,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写出更Pythonic的代码，"><span class="nav-number">1.</span> <span class="nav-text">写出更Pythonic的代码，</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-将序列分解为单独的变量-直接将序列赋值给变量即可。但是要注意："><span class="nav-number">1.1.</span> <span class="nav-text">1. 将序列分解为单独的变量,直接将序列赋值给变量即可。但是要注意：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-当序列特别长时，而我们又只需某一部分的话可以用-arg来表示。"><span class="nav-number">1.2.</span> <span class="nav-text">2. 当序列特别长时，而我们又只需某一部分的话可以用 *arg来表示。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-从队列两端添加或弹出元素的复杂度为O-1-这和列表不同，当从列表头部插入或移除元素时，列表的复杂度为O-N"><span class="nav-number">1.3.</span> <span class="nav-text">3.从队列两端添加或弹出元素的复杂度为O(1),这和列表不同，当从列表头部插入或移除元素时，列表的复杂度为O(N).</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-找到最大或最小的N个元素"><span class="nav-number">1.4.</span> <span class="nav-text">4.找到最大或最小的N个元素</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
