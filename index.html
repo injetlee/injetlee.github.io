@@ -253,447 +253,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/28/task19/scripts/task19/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-28T22:50:21+08:00" content="2016-12-28">
-              2016-12-28
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            var val,flag=false;
-var res = {
-	"arr":[],
-	"delay":10,
-	"left-in":function(){
-		var value = document.getElementById("input").value;
-		pattern = /^[0-9]+$/;
-		if(pattern.test(value)){
-			res.arr.unshift(value);
-			render();
-		}else{
-			alert("请输入数字");
-		}
-	},
-	"right-in":function(){
-		var value = document.getElementById("input").value;
-		pattern = /^[0-9]+$/
-		if(pattern.test(value)){
-			res.arr.push(value);
-			render();
-		}else{
-			alert("请输入数字");
-		}
-	},
-	"left-out":function(){
-		alert(res.arr.shift());
-		render();
-	},
-	"right-out":function(){
-		alert(res.arr.pop());
-		render();
-	},
-	"random":function(){
-		res.arr = []
-		for(var i=0;i<50;i++){ var="" value="Math.floor(Math.random()*100)" res.arr.push(value)="" render()="" }="" },="" "rank":function(){="" flag="false;" delay="document.getElementById("speed").value;" console.log(delay)="" if(delay){="" res.delay="delay;" valuelist="res.arr;" i="0,j=1;" if(flag="=false" &&="" valuelist.length="">0){
-			var timer = setInterval(function(){
-				flag = true;
-				if(valueList[i]>valueList[i+1]){
-					temp = valueList[i];
-					valueList[i] = valueList[i+1];
-					valueList[i+1] = temp;
-				}
-				render(i)
-				++i;
-				
-				if(i == res.arr.length-j){
-					i = 0;
-					++j;
-				}
-				if(j==res.arr.length){
-					flag = false;
-					clearInterval(timer)
-					render()
-				}
-			},res.delay)
-		}else if(flag==true){
-			alert("正在排序")
-		}
-		// while (count<50){ for(var="" i="0;i<res.arr.length;i++){" if(valuelist[i]="">valueList[i+1]){
-		// 			temp = valueList[i];
-		// 			valueList[i] = valueList[i+1];
-		// 			valueList[i+1] = temp;
-		// 		}
-		// 	}
-		// 	count += 1 ;
-		// 	render()
-		// }
-	}
-}
-
-var getButton = document.getElementsByTagName("button");
-for(var i=0;i<getbutton.length;i++){ getbutton[i].onclick="res[getButton[i].id]" }="" function="" render(val){="" var="" str="" getdisplay="document.getElementById("display-area");" if(res.arr.length="">60){
-		alert("当前已经有"+ res.arr.length + "个元素")
-	}
-	for(var i=0;i<res.arr.length;i++){ str="" +="<div>" res.arr[i]="" "<="" div="">"
-	}
-	getDisplay.innerHTML = str;
-	var getVal = getDisplay.getElementsByTagName("div");
-	if(val>-1 && val</res.arr.length;i++){></getbutton.length;i++){></50){></50;i++){>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/28/task19/task19/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-28T22:50:21+08:00" content="2016-12-28">
-              2016-12-28
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-		#display-area{
-			display: flex;
-			align-items:flex-end;
-
-		}
-		#display-area>div{
-			flex:none;
-			background: red;
-			margin-left:5px;
-			height:50px;
-			width:18px;
-			border:2px solid #000;
-			padding-top:2px;
-			padding-left:8px;
-			font-size:15px;
-			color:#fff;
-		}
-	</style>
-</head>
-<body>
-	<div>
-		<input id="input" type="text">
-		<button id="left-in">左侧入</button>
-		<button id="right-in">右侧入</button>
-		<button id="left-out">左侧出</button>
-		<button id="right-out">右侧出</button>
-		<button id="random">随机50个数</button>
-		<input id="speed">速度</div>
-		<button id="rank">排序</button>
-
-	
-	<div id="display-area">
-		
-	</div>
-	<script src="scripts/task19.js"></script>
-</body>
-</html>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/28/task19/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-28T22:48:06+08:00" content="2016-12-28">
-              2016-12-28
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-		#display-area{
-			display: flex;
-			align-items:flex-end;
-
-		}
-		#display-area>div{
-			flex:none;
-			background: red;
-			margin-left:5px;
-			height:50px;
-			width:18px;
-			border:2px solid #000;
-			padding-top:2px;
-			padding-left:8px;
-			font-size:15px;
-			color:#fff;
-		}
-	</style>
-</head>
-<body>
-	<div>
-		<input id="input" type="text">
-		<button id="left-in">左侧入</button>
-		<button id="right-in">右侧入</button>
-		<button id="left-out">左侧出</button>
-		<button id="right-out">右侧出</button>
-		<button id="random">随机50个数</button>
-		<input id="speed">速度</div>
-		<button id="rank">排序</button>
-
-	
-	<div id="display-area">
-		
-	</div>
-	<script src="scripts/task19.js"></script>
-</body>
-</html>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/12/13/PythonCookbook笔记-02/" itemprop="url">
                   PythonCookbook笔记-02
                 </a>
@@ -1506,13 +1065,125 @@ for(var i=0;i<getbutton.length;i++){ getbutton[i].onclick="res[getButton[i].id]"
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/26/一周总结/" itemprop="url">
+                  一周总结
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-26T00:14:45+08:00" content="2016-03-26">
+              2016-03-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>上班一周时间了，前两天就是看Django文档了，之前有Flask的基础在，看起来还是比较轻松的。反而感觉Django刚开始需要配置的东西很少，觉得比Flask好用。实际上，web框架的基本架构是一致的，都是MVC架构。所以看起来也是比较有层次。毕竟之前折腾过Flask，现在Django配置起来还算得心应手。官方文档上的投票小应用比较简单，只是对整体框架的一个大概认识，对整体有个大致的了解，接下来还需要对每部分进行深入学习。</p>
+<p>后两天，就开始着手干一点实际的活了。公司之前有一个基于Flask的小项目，现在想统一下技术栈，正好交给我，让我把其迁移到Django上。初步看了一下，视图层还是比较好做，把原来的Html模版拿过来改改就可以直接用了，把视图函数重新写写，就可以实现页面逻辑了。</p>
+<p>比较难理解的是关于请求的部分，Flask中的request.arg.get在Django中该怎么来获取值，这些还是困扰我时间比较多的，只能向其他人请教进行解决。Html页面中涉及到比较多的js。所以需要把js基础方面补补，争取达到能够看懂，修改的地步。</p>
+<p>接下来的一段时间，重心还是在Django和项目的API上，要重点把Django中的各种实现方式理解下，了解API的设计模式和思路。先写这么多吧。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
@@ -1551,7 +1222,7 @@ for(var i=0;i<getbutton.length;i++){ getbutton[i].onclick="res[getButton[i].id]"
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
