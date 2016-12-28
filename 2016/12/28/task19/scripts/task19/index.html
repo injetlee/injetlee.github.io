@@ -84,15 +84,40 @@
 
 
 
-<meta name="description" content="思考感悟 学习总结">
-<meta property="og:type" content="website">
+<meta name="description" content="var val,flag=false;
+var res = {
+	&quot;arr&quot;:[],
+	&quot;delay&quot;:10,
+	&quot;left-in&quot;:function(){
+		var value = document.getElementById(&quot;input&quot;).value;
+		pattern = /^[0-9]+$/;
+		if(pattern.test(value)){
+			res.arr.unshi">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hiden">
-<meta property="og:url" content="http://hiden.me/archives/2016/04/index.html">
+<meta property="og:url" content="http://hiden.me/2016/12/28/task19/scripts/task19/index.html">
 <meta property="og:site_name" content="Hiden">
-<meta property="og:description" content="思考感悟 学习总结">
+<meta property="og:description" content="var val,flag=false;
+var res = {
+	&quot;arr&quot;:[],
+	&quot;delay&quot;:10,
+	&quot;left-in&quot;:function(){
+		var value = document.getElementById(&quot;input&quot;).value;
+		pattern = /^[0-9]+$/;
+		if(pattern.test(value)){
+			res.arr.unshi">
+<meta property="og:updated_time" content="2016-12-28T14:42:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hiden">
-<meta name="twitter:description" content="思考感悟 学习总结">
+<meta name="twitter:description" content="var val,flag=false;
+var res = {
+	&quot;arr&quot;:[],
+	&quot;delay&quot;:10,
+	&quot;left-in&quot;:function(){
+		var value = document.getElementById(&quot;input&quot;).value;
+		pattern = /^[0-9]+$/;
+		if(pattern.test(value)){
+			res.arr.unshi">
 
 
 
@@ -110,7 +135,7 @@
   };
 </script>
 
-  <title> 归档 | Hiden </title>
+  <title>  | Hiden </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,7 +156,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -229,66 +254,192 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 11 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-28T22:50:21+08:00" content="2016-12-28">
+              2016-12-28
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        var val,flag=false;
+var res = {
+	"arr":[],
+	"delay":10,
+	"left-in":function(){
+		var value = document.getElementById("input").value;
+		pattern = /^[0-9]+$/;
+		if(pattern.test(value)){
+			res.arr.unshift(value);
+			render();
+		}else{
+			alert("请输入数字");
+		}
+	},
+	"right-in":function(){
+		var value = document.getElementById("input").value;
+		pattern = /^[0-9]+$/
+		if(pattern.test(value)){
+			res.arr.push(value);
+			render();
+		}else{
+			alert("请输入数字");
+		}
+	},
+	"left-out":function(){
+		alert(res.arr.shift());
+		render();
+	},
+	"right-out":function(){
+		alert(res.arr.pop());
+		render();
+	},
+	"random":function(){
+		res.arr = []
+		for(var i=0;i<50;i++){ var="" value="Math.floor(Math.random()*100)" res.arr.push(value)="" render()="" }="" },="" "rank":function(){="" flag="false;" delay="document.getElementById("speed").value;" console.log(delay)="" if(delay){="" res.delay="delay;" valuelist="res.arr;" i="0,j=1;" if(flag="=false" &&="" valuelist.length="">0){
+			var timer = setInterval(function(){
+				flag = true;
+				if(valueList[i]>valueList[i+1]){
+					temp = valueList[i];
+					valueList[i] = valueList[i+1];
+					valueList[i+1] = temp;
+				}
+				render(i)
+				++i;
+				
+				if(i == res.arr.length-j){
+					i = 0;
+					++j;
+				}
+				if(j==res.arr.length){
+					flag = false;
+					clearInterval(timer)
+					render()
+				}
+			},res.delay)
+		}else if(flag==true){
+			alert("正在排序")
+		}
+		// while (count<50){ for(var="" i="0;i<res.arr.length;i++){" if(valuelist[i]="">valueList[i+1]){
+		// 			temp = valueList[i];
+		// 			valueList[i] = valueList[i+1];
+		// 			valueList[i+1] = temp;
+		// 		}
+		// 	}
+		// 	count += 1 ;
+		// 	render()
+		// }
+	}
+}
+
+var getButton = document.getElementsByTagName("button");
+for(var i=0;i<getbutton.length;i++){ getbutton[i].onclick="res[getButton[i].id]" }="" function="" render(val){="" var="" str="" getdisplay="document.getElementById("display-area");" if(res.arr.length="">60){
+		alert("当前已经有"+ res.arr.length + "个元素")
+	}
+	for(var i=0;i<res.arr.length;i++){ str="" +="<div>" res.arr[i]="" "<="" div="">"
+	}
+	getDisplay.innerHTML = str;
+	var getVal = getDisplay.getElementsByTagName("div");
+	if(val>-1 && val</res.arr.length;i++){></getbutton.length;i++){></50){></50;i++){>
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/28/task19/task19/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/01/Python-Django-AngularJS/" itemprop="url">
-              
-                <span itemprop="name">Python+Django+AngularJS</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-01T23:11:39+08:00"
-              content="2016-04-01" >
-          04-01
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -296,6 +447,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -315,8 +470,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/16176848?v=3&s=460"
@@ -404,6 +568,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -507,11 +682,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
