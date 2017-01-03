@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="技术," />
 
 
 
@@ -84,19 +84,25 @@
 
 
 
-<meta name="description" content="这周接触的东西很多，其中有些概念性的东西就不写出来了，简单对过程中自己有疑惑，经指点后掌握的部分进行总结。
-第一条在Django中有个templatetags可以允许用户自定义标签，通过定义一个函数可以对后续部分进行相应的处理，本周，有一处跳转用到，编写一个函数，当满足一个条件时跳转到一页，满足另一个条件时跳转到另一页。定义好标签后，在Template文件中只需把需要跳转部分标签用自定义过的标签代">
+<meta name="description" content="super()函数根据传进去的两个参数具体作用如下：
+
+通过第一参数传进去的类名确定当前在MRO中的哪个位置。MRO(Method Resolution Order)；
+通过第二个参数传进去的self，确定当前的MRO列表。123def super(cls, inst):    mro = inst.__class__.mro() #确定当前MRO列表    return mro[mro.inde">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python+Django+AngularJS">
-<meta property="og:url" content="http://hiden.me/2016/04/01/Python-Django-AngularJS/index.html">
+<meta property="og:title" content="Python">
+<meta property="og:url" content="http://hiden.me/2017/01/03/Python-super/index.html">
 <meta property="og:site_name" content="Hiden">
-<meta property="og:description" content="这周接触的东西很多，其中有些概念性的东西就不写出来了，简单对过程中自己有疑惑，经指点后掌握的部分进行总结。
-第一条在Django中有个templatetags可以允许用户自定义标签，通过定义一个函数可以对后续部分进行相应的处理，本周，有一处跳转用到，编写一个函数，当满足一个条件时跳转到一页，满足另一个条件时跳转到另一页。定义好标签后，在Template文件中只需把需要跳转部分标签用自定义过的标签代">
-<meta property="og:updated_time" content="2016-05-22T12:46:29.668Z">
+<meta property="og:description" content="super()函数根据传进去的两个参数具体作用如下：
+
+通过第一参数传进去的类名确定当前在MRO中的哪个位置。MRO(Method Resolution Order)；
+通过第二个参数传进去的self，确定当前的MRO列表。123def super(cls, inst):    mro = inst.__class__.mro() #确定当前MRO列表    return mro[mro.inde">
+<meta property="og:updated_time" content="2017-01-03T13:07:04.922Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python+Django+AngularJS">
-<meta name="twitter:description" content="这周接触的东西很多，其中有些概念性的东西就不写出来了，简单对过程中自己有疑惑，经指点后掌握的部分进行总结。
-第一条在Django中有个templatetags可以允许用户自定义标签，通过定义一个函数可以对后续部分进行相应的处理，本周，有一处跳转用到，编写一个函数，当满足一个条件时跳转到一页，满足另一个条件时跳转到另一页。定义好标签后，在Template文件中只需把需要跳转部分标签用自定义过的标签代">
+<meta name="twitter:title" content="Python">
+<meta name="twitter:description" content="super()函数根据传进去的两个参数具体作用如下：
+
+通过第一参数传进去的类名确定当前在MRO中的哪个位置。MRO(Method Resolution Order)；
+通过第二个参数传进去的self，确定当前的MRO列表。123def super(cls, inst):    mro = inst.__class__.mro() #确定当前MRO列表    return mro[mro.inde">
 
 
 
@@ -114,7 +120,7 @@
   };
 </script>
 
-  <title> Python+Django+AngularJS | Hiden </title>
+  <title> Python | Hiden </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +260,7 @@
             
             
               
-                Python+Django+AngularJS
+                Python
               
             
           </h1>
@@ -266,8 +272,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-01T23:11:39+08:00" content="2016-04-01">
-              2016-04-01
+            <time itemprop="dateCreated" datetime="2017-01-03T20:17:26+08:00" content="2017-01-03">
+              2017-01-03
             </time>
           </span>
 
@@ -280,8 +286,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -313,10 +319,15 @@
       
 
       
-        <p>这周接触的东西很多，其中有些概念性的东西就不写出来了，简单对过程中自己有疑惑，经指点后掌握的部分进行总结。</p>
-<h3 id="第一条"><a href="#第一条" class="headerlink" title="第一条"></a>第一条</h3><p>在Django中有个templatetags可以允许用户自定义标签，通过定义一个函数可以对后续部分进行相应的处理，本周，有一处跳转用到，编写一个函数，当满足一个条件时跳转到一页，满足另一个条件时跳转到另一页。定义好标签后，在Template文件中只需把需要跳转部分标签用自定义过的标签代替，当点击时就会自动执行函数进行判断，从而实现跳转到不同页面。<a id="more"></a></p>
-<h3 id="第二条"><a href="#第二条" class="headerlink" title="第二条"></a>第二条</h3><p>通过AngularJS和数据库交互数据时，可以通过Django的视图函数来创建与数据库的连接，在AngularJS中通过$http.get()方法取得视图函数返回的数据，再应用到模板页面。另外当AngularJS需要向数据库传输数据时，通过$http.post()方法向Django视图函数传递数据，通过视图函数写入数据库。当传递过去的数据是JSON格式时，在获取数据时需要用request.body来获取，并且得到的是一个字符串类型，需要使用到ast模块来转换为字典。</p>
-<h3 id="第三条"><a href="#第三条" class="headerlink" title="第三条"></a>第三条</h3><p>AngularJS中实现数据绑定使用的是ng-bind指令或者两组大括号直接在中间写入变量。但是在Python中，会自动转义为Python的类型，所以在页面首部应该定义，禁止自动转义，在页面中就可以正常显示了。</p>
+        <p>super()函数根据传进去的两个参数具体作用如下：</p>
+<ul>
+<li>通过第一参数传进去的类名确定当前在MRO中的哪个位置。MRO(Method Resolution Order)；</li>
+<li>通过第二个参数传进去的self，确定当前的MRO列表。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">super</span><span class="params">(cls, inst)</span>:</span></span><br><span class="line">    mro = inst.__class__.mro() <span class="comment">#确定当前MRO列表</span></span><br><span class="line">    <span class="keyword">return</span> mro[mro.index(cls) + <span class="number">1</span>] <span class="comment">#返回下一个类</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如下代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">    print(<span class="string">'name is xiaoming'</span>)</span><br><span class="line">    <span class="comment">#super(A,self).name()</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(object)</span>:</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">    print(<span class="string">'name is cat'</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A,B)</span>:</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">    print(<span class="string">'name is wang'</span>)</span><br><span class="line">    super(C,self).name()</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">  c = C()</span><br><span class="line">  print(c.__class__.__mro__)</span><br><span class="line">  c.name()</span><br></pre></td></tr></table></figure></p>
+<p>执行以上代码输出：当执行C类下的super()函数时，实际调用了A类下的name函数。A中注释掉了super()函数，所以并没有向后继续执行。并且打印出了当前MRO列表顺序为C,A,B,object.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(&lt;class &apos;__main__.C&apos;&gt;, &lt;class &apos;__main__.A&apos;&gt;, &lt;class &apos;__main__.B&apos;&gt;, &lt;class &apos;object&apos;&gt;)</span><br><span class="line">name is wang</span><br><span class="line">name is xiaoming</span><br></pre></td></tr></table></figure></p>
+<p>当我们把A类中的注释去掉后，执行代码输出：可以看到，当A执行后继续执行了B中的name()函数。如果B中仍然有super函数则会继续向上去查找object中是否有name()函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(&lt;class &apos;__main__.C&apos;&gt;, &lt;class &apos;__main__.A&apos;&gt;, &lt;class &apos;__main__.B&apos;&gt;, &lt;class &apos;object&apos;&gt;)</span><br><span class="line">name is wang</span><br><span class="line">name is xiaoming</span><br><span class="line">name is cat</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -338,7 +349,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag">#Python</a>
+            <a href="/tags/技术/" rel="tag">#技术</a>
           
         </div>
       
@@ -347,17 +358,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/26/一周总结/" rel="next" title="一周总结">
-                <i class="fa fa-chevron-left"></i> 一周总结
+              <a href="/2016/12/13/PythonCookbook笔记-02/" rel="next" title="PythonCookbook笔记-02">
+                <i class="fa fa-chevron-left"></i> PythonCookbook笔记-02
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/07/Winows平台Python2与Python3共存/" rel="prev" title="Winows平台Python2与Python3共存">
-                Winows平台Python2与Python3共存 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -509,7 +516,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一条"><span class="nav-number">1.</span> <span class="nav-text">第一条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二条"><span class="nav-number">2.</span> <span class="nav-text">第二条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三条"><span class="nav-number">3.</span> <span class="nav-text">第三条</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
