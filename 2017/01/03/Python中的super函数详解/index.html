@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="技术," />
 
 
 
@@ -84,16 +84,25 @@
 
 
 
-<meta name="description" content="第二周了,简单回顾一下本周学习的知识，也算对自己成长路径的记录吧。上周初步接触了Django，了解了一些简单页面的逻辑。这周开始就接触了AngularJS,由于对javaScripts是0基础，所以一开始简直是懵了。这都是神马东西。硬着头皮看了一个AngularJS和Django配合所做的小项目，结果肯定是没看懂了。第二天在同事的指点下，对AngularJS的基本用法进行了了解，对基本的一个控制模">
+<meta name="description" content="super()函数根据传进去的两个参数具体作用如下：
+
+通过第一参数传进去的类名确定当前在MRO中的哪个位置。MRO(Method Resolution Order)；
+通过第二个参数传进去的self，确定当前的MRO列表。123def super(cls, inst):    mro = inst.__class__.mro() #确定当前MRO列表    return mro[mro.inde">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第二周总结">
-<meta property="og:url" content="http://hiden.me/2016/04/01/第二周总结/index.html">
+<meta property="og:title" content="Python">
+<meta property="og:url" content="http://hiden.me/2017/01/03/Python中的super函数详解/index.html">
 <meta property="og:site_name" content="Hiden">
-<meta property="og:description" content="第二周了,简单回顾一下本周学习的知识，也算对自己成长路径的记录吧。上周初步接触了Django，了解了一些简单页面的逻辑。这周开始就接触了AngularJS,由于对javaScripts是0基础，所以一开始简直是懵了。这都是神马东西。硬着头皮看了一个AngularJS和Django配合所做的小项目，结果肯定是没看懂了。第二天在同事的指点下，对AngularJS的基本用法进行了了解，对基本的一个控制模">
-<meta property="og:updated_time" content="2017-01-03T13:10:44.901Z">
+<meta property="og:description" content="super()函数根据传进去的两个参数具体作用如下：
+
+通过第一参数传进去的类名确定当前在MRO中的哪个位置。MRO(Method Resolution Order)；
+通过第二个参数传进去的self，确定当前的MRO列表。123def super(cls, inst):    mro = inst.__class__.mro() #确定当前MRO列表    return mro[mro.inde">
+<meta property="og:updated_time" content="2017-01-03T13:11:46.320Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第二周总结">
-<meta name="twitter:description" content="第二周了,简单回顾一下本周学习的知识，也算对自己成长路径的记录吧。上周初步接触了Django，了解了一些简单页面的逻辑。这周开始就接触了AngularJS,由于对javaScripts是0基础，所以一开始简直是懵了。这都是神马东西。硬着头皮看了一个AngularJS和Django配合所做的小项目，结果肯定是没看懂了。第二天在同事的指点下，对AngularJS的基本用法进行了了解，对基本的一个控制模">
+<meta name="twitter:title" content="Python">
+<meta name="twitter:description" content="super()函数根据传进去的两个参数具体作用如下：
+
+通过第一参数传进去的类名确定当前在MRO中的哪个位置。MRO(Method Resolution Order)；
+通过第二个参数传进去的self，确定当前的MRO列表。123def super(cls, inst):    mro = inst.__class__.mro() #确定当前MRO列表    return mro[mro.inde">
 
 
 
@@ -111,7 +120,7 @@
   };
 </script>
 
-  <title> 第二周总结 | Hiden </title>
+  <title> Python | Hiden </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +260,7 @@
             
             
               
-                第二周总结
+                Python
               
             
           </h1>
@@ -263,8 +272,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-01T23:14:06+08:00" content="2016-04-01">
-              2016-04-01
+            <time itemprop="dateCreated" datetime="2017-01-03T20:17:26+08:00" content="2017-01-03">
+              2017-01-03
             </time>
           </span>
 
@@ -277,8 +286,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -310,10 +319,15 @@
       
 
       
-        <p>第二周了,简单回顾一下本周学习的知识，也算对自己成长路径的记录吧。<br>上周初步接触了Django，了解了一些简单页面的逻辑。这周开始就接触了AngularJS,由于对javaScripts是0基础，所以一开始简直是懵了。这都是神马东西。硬着头皮看了一个AngularJS和Django配合所做的小项目，结果肯定是没看懂了。<br>第二天在同事的指点下，对AngularJS的基本用法进行了了解，对基本的一个控制模式和常用的指令进行掌握，但是，这只是概念性的了解，然后我要做的是模仿之前的项目自己写出来一个作为对新知识的练习。可想而知。。</p>
-<p>最后是在同事的指点下，一步一步给写出来了，虽然很简单，但是对AngularJS的认识确实加深了许多。</p>
-<p>周四的时候，在目前公司的项目基础上添加新的功能，所以先写了两个静态页面，并通过AngularJS进行跳转交互，之后通过视图函数和数据库连接获取数据再通过AngularJS传递给静态页面，实现了用户token生产，帐号，密码写入等操作。</p>
-<p>开始，确实挺痛苦的，要补的太多，对于网络之间的请求，数据传递模模糊糊的，通过实际的编码，确实有了更深入的了解。</p>
+        <p>super()函数根据传进去的两个参数具体作用如下：</p>
+<ul>
+<li>通过第一参数传进去的类名确定当前在MRO中的哪个位置。MRO(Method Resolution Order)；</li>
+<li>通过第二个参数传进去的self，确定当前的MRO列表。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">super</span><span class="params">(cls, inst)</span>:</span></span><br><span class="line">    mro = inst.__class__.mro() <span class="comment">#确定当前MRO列表</span></span><br><span class="line">    <span class="keyword">return</span> mro[mro.index(cls) + <span class="number">1</span>] <span class="comment">#返回下一个类</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如下代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">    print(<span class="string">'name is xiaoming'</span>)</span><br><span class="line">    <span class="comment">#super(A,self).name()</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(object)</span>:</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">    print(<span class="string">'name is cat'</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A,B)</span>:</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">    print(<span class="string">'name is wang'</span>)</span><br><span class="line">    super(C,self).name()</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">  c = C()</span><br><span class="line">  print(c.__class__.__mro__)</span><br><span class="line">  c.name()</span><br></pre></td></tr></table></figure></p>
+<p>执行以上代码输出：当执行C类下的super()函数时，实际调用了A类下的name函数。A中注释掉了super()函数，所以并没有向后继续执行。并且打印出了当前MRO列表顺序为C,A,B,object.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(&lt;class &apos;__main__.C&apos;&gt;, &lt;class &apos;__main__.A&apos;&gt;, &lt;class &apos;__main__.B&apos;&gt;, &lt;class &apos;object&apos;&gt;)</span><br><span class="line">name is wang</span><br><span class="line">name is xiaoming</span><br></pre></td></tr></table></figure></p>
+<p>当我们把A类中的注释去掉后，执行代码输出：可以看到，当A执行后继续执行了B中的name()函数。如果B中仍然有super函数则会继续向上去查找object中是否有name()函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(&lt;class &apos;__main__.C&apos;&gt;, &lt;class &apos;__main__.A&apos;&gt;, &lt;class &apos;__main__.B&apos;&gt;, &lt;class &apos;object&apos;&gt;)</span><br><span class="line">name is wang</span><br><span class="line">name is xiaoming</span><br><span class="line">name is cat</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -335,7 +349,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag">#Python</a>
+            <a href="/tags/技术/" rel="tag">#技术</a>
           
         </div>
       
@@ -344,17 +358,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/01/Python-Django-AngularJS/" rel="next" title="Python+Django+AngularJS">
-                <i class="fa fa-chevron-left"></i> Python+Django+AngularJS
+              <a href="/2017/01/03/Python中的super函数/" rel="next" title="Python">
+                <i class="fa fa-chevron-left"></i> Python
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/07/Winows平台Python2与Python3共存/" rel="prev" title="Winows平台Python2与Python3共存">
-                Winows平台Python2与Python3共存 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
